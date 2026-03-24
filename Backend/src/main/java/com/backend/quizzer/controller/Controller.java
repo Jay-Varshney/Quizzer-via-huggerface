@@ -32,12 +32,17 @@ public class Controller {
         this.chatService = chatService;
     }
 
+    // @GetMapping("/")
+    // public void redirect(HttpServletResponse response) throws IOException {
+    // response.sendRedirect("https://quizzer-hj71raqa8-jay-varshneys-projects-44d2e328.vercel.app");
+    // }
+
     @GetMapping("/")
-    public void redirect(HttpServletResponse response) throws IOException {
-        response.sendRedirect("https://quizzer-hj71raqa8-jay-varshneys-projects-44d2e328.vercel.app");
+    @ResponseBody
+    public String home() {
+        return "<html><body><script>window.location.href='https://quizzer-hj71raqa8-jay-varshneys-projects-44d2e328.vercel.app';</script><p>Redirecting...</p></body></html>";
     }
 
-    
     @GetMapping("/chat/normal")
     public String callnormalai(@RequestParam("q") String q) {
         return chatService.chat(q);
