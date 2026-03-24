@@ -23,7 +23,7 @@ function App() {
 
   //   // setLoading(true);
   //   // try{
-  //   //   const response = await axios.get('https://huggingface.co/spaces/JayVars/quizzerApp/chat/genQue', {
+  //   //   const response = await axios.get('https://jayvars-quizzerapp.hf.space/chat/genQue', {
   //   //     params: {
   //   //       n: num,
   //   //       q: topic
@@ -77,7 +77,7 @@ function App() {
     setStep('loading');
     
     try {
-      const response = await axios.get('https://huggingface.co/spaces/JayVars/quizzerApp/chat/genQue', {
+      const response = await axios.get('https://jayvars-quizzerapp.hf.space/chat/genQue', {
         params: { n: numQuestions, q: topic }
       });
 
@@ -119,7 +119,7 @@ function App() {
           totalQuestionCount : questions.length,
           attempts : attempts
         };
-        const response = await axios.post('https://huggingface.co/spaces/JayVars/quizzerApp/chat/evaluate', load);
+        const response = await axios.post('https://jayvars-quizzerapp.hf.space/chat/evaluate', load);
         console.log(response);
         setsuggestion(response.data);
         setStep('results');
