@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
-@RequestMapping("chat")
+// @RequestMapping("chat")
 // @CrossOrigin(origins = "*")
 @CrossOrigin(origins = "*", allowedHeaders = "*", methods = {
         RequestMethod.GET,
@@ -31,17 +31,23 @@ public class Controller {
         this.chatService = chatService;
     }
 
-    @GetMapping("/normal")
+    @GetMapping("/")
+    public void redirect(HttpServletResponse response) throws IOException {
+        response.sendRedirect("https://quizzer-hj71raqa8-jay-varshneys-projects-44d2e328.vercel.app");
+    }
+
+    
+    @GetMapping("/chat/normal")
     public String callnormalai(@RequestParam("q") String q) {
         return chatService.chat(q);
     }
 
-    @GetMapping("/genQue")
+    @GetMapping("/chat/genQue")
     public Question generaQuestion(@RequestParam("n") int num, @RequestParam("q") String q) {
         return chatService.genQue(num, q);
     }
 
-    @PostMapping("/evaluate")
+    @PostMapping("/chat/evaluate")
     public Evaluation evaluateTheAnswers(@RequestBody Evaluate eval) {
         return chatService.evaluate(eval);
     }
