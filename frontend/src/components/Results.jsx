@@ -9,7 +9,7 @@ const Results = ({ questions, userAnswers, onRestart, onRepeat, suggestion}) => 
     <div className="glass-card">
       <h1>Quiz Results</h1>
       <div className="score-badge">
-        {score} / {questions.length}
+        {score} / {questions.length * 5}
       </div>
       <p style={{ textAlign: 'center', color: 'var(--text-muted)', marginBottom: '2rem' }}>
         Great effort! Here is a detailed breakdown of your performance.
