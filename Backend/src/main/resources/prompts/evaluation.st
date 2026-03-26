@@ -11,9 +11,13 @@ The JSON above contains an "attempts" array. Each object in it has:
 Go through each attempt ONE BY ONE in order (attempt 1, attempt 2, ... attempt {totalCount}).
 For EACH attempt produce exactly one result object.
 
-### SCORING RULES:
-- score = 1 if the answer is correct
-- score = 0 if the answer is wrong or incomplete
+# Scoring Rules (5-Mark Scale)
+* **Maximum Score:** 5.0 per question.
+* **Partial Marking:** Award points based on conceptual accuracy and completeness of the response.
+* **Leniency Rule:** Do NOT penalize for spelling, punctuation, or grammatical errors unless the question specifically tests linguistics or grammar.
+* **Grading Scale:** - 5/5: Fully accurate and comprehensive.
+    - 1–4/5: Conceptually sound but missing specific technical components or logic gaps.
+    - 0/5: Entirely incorrect or irrelevant.
 
 ### FEEDBACK RULES:
 - detailedFeedback must be specific to that exact question and answer
