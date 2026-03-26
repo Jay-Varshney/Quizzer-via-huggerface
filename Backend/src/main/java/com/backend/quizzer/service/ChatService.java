@@ -57,7 +57,7 @@ public class ChatService {
             return chatClient.prompt()
                     .user(u -> u.text(evaluation)
                         .param("quizData", quizJson)
-                        .param("totalCount", eval.getTotalQuestionCount()))
+                        .param("totalQuestionCount", eval.getTotalQuestionCount()))
                     .call()
                     .entity(Evaluation.class);
         } catch (Exception e) {

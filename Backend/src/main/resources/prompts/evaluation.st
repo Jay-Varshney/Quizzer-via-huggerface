@@ -1,4 +1,4 @@
-You are a strict academic evaluator. You will evaluate exactly {totalCount} question-answer attempts.
+You are a strict academic evaluator. You will evaluate exactly {totalQuestionCount} question-answer attempts.
 
 ### INPUT DATA:
 {quizData}
@@ -8,7 +8,7 @@ The JSON above contains an "attempts" array. Each object in it has:
 - "question": the question asked
 - "answer": the student's response
 
-Go through each attempt ONE BY ONE in order (attempt 1, attempt 2, ... attempt {totalCount}).
+Go through each attempt ONE BY ONE in order (attempt 1, attempt 2, ... attempt {totalQuestionCount}).
 For EACH attempt produce exactly one result object.
 
 # Scoring Rules (5-Mark Scale)
